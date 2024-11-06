@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import edu.bdu.dao.SurveyDaoImpl;
+import edu.bdu.dao.SurveyDaoImpl;12312
 import edu.bdu.dao.UserDaoImpl;
 import edu.bdu.entity.User;
 import edu.bdu.entity.Survey;
@@ -19,19 +19,19 @@ import edu.bdu.entity.User;
 
 public class AdminIndexAction extends HttpServlet {
     /**
-     * ³õÊ¼»¯
+     * ï¿½ï¿½Ê¼ï¿½ï¿½
      */
-	private SurveyDaoImpl surveyOp;//µ÷²éÎÊ¾í²Ù×÷Àà
-	
-	private UserDaoImpl userOp;//ÓÃ»§²Ù×÷Àà
-	
-	private int titleSize = 9;//±êÌâÏÔÊ¾µÄ×î´ó×Ö·ûÊý
-	
-	private int linkSize = 9;//Á¬½ÓÏÔÊ¾µÄ×î´ó×Ö·ûÊý
-	
-	private int nameSize = 9;//ÓÃ»§ÃûÏÔÊ¾µÄ×î´ó×Ö·ûÊý
-	
-	private int passSize = 9;//ÓÃ»§ÃÜÂëÏÔÊ¾µÄ×î´ó×Ö·ûÊý
+	private SurveyDaoImpl surveyOp;//ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+	private UserDaoImpl userOp;//ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+	private int titleSize = 9;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
+
+	private int linkSize = 9;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
+
+	private int nameSize = 9;//ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
+
+	private int passSize = 9;//ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
 
 	public AdminIndexAction() {
 		super();
@@ -46,9 +46,9 @@ public class AdminIndexAction extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-        doPost(request,response);//µ÷ÓÃdoPost·½·¨½øÐÐ´¦Àí
+        doPost(request,response);//ï¿½ï¿½ï¿½ï¿½doPostï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½
 		/*response.setContentType("text/html");
-		PrintWriter out = response.getWriter();//»ñÈ¡Êä³öÁ÷
+		PrintWriter out = response.getWriter();//ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½
 		out.println("hello");
 		out.flush();
 		out.close();*/
@@ -57,222 +57,222 @@ public class AdminIndexAction extends HttpServlet {
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		response.setCharacterEncoding("UTF-8");//ÉèÖÃ±àÂë¸ñÊ½
+		response.setCharacterEncoding("UTF-8");//ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½ï¿½Ê½
 		response.setContentType("text/html");
-		HttpSession session = request.getSession();//»ñµÃÇëÇósession
-		PrintWriter out = response.getWriter();//»ñÈ¡Êä³öÁ÷
-		
-		int commType = Integer.parseInt(request.getParameter("comType"));//»ñµÃ²Ù×÷ÀàÐÍÂë
-		
+		HttpSession session = request.getSession();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½session
+		PrintWriter out = response.getWriter();//ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½
+
+		int commType = Integer.parseInt(request.getParameter("comType"));//ï¿½ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
 		switch(commType)
 		{
 		case 1:
-			
-	        out.println(getSurveyListTen());//»ñµÃµ÷²éÎÊ¾íÁÐ±í
-	        
+
+	        out.println(getSurveyListTen());//ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ð±ï¿½
+
 			break;
 		case 2:
-			
-			out.println(getUserListTen());//»ñµÃ×îÐÂÌí¼ÓµÄÓÃ»§ÁÐ±í
-			
+
+			out.println(getUserListTen());//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½Ã»ï¿½ï¿½Ð±ï¿½
+
 			break;
 		case 3:
-			
-	        User user = (User)session.getAttribute("user");//»ñµÃµ±Ç°ÓÃ»§ÐÅÏ¢
-	        
+
+	        User user = (User)session.getAttribute("user");//ï¿½ï¿½Ãµï¿½Ç°ï¿½Ã»ï¿½ï¿½ï¿½Ï¢
+
 	        String userInfo = "{\"userID\":\"" + user.getUserID() + "\","   +
 	        		"\"userName\":\"" + user.getUserName() + "\"," +
 	        		"\"userPass\":\"" + user.getUserPassword() + "\"," +
 	        	    "\"userType\":\"" + user.getUserType() + "\"}";
-	        
+
 	        if(user != null)
-	           out.print(userInfo);//»ñµÃÓÃ»§Ãû³Æ
+	           out.print(userInfo);//ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
 	        else
-	           out.print("usererror");//ÓÃ»§Éí·Ý²»ÕýÈ·
-	        
+	           out.print("usererror");//ï¿½Ã»ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½È·
+
 			break;
-			
+
 		case 4:
-			
-            session.invalidate();//ÓÃ»§sessionÉèÖÃÊ§Ð§
-            
-            out.print("loginout");//ÓÃ»§ÍË³ö³É¹¦
-			
+
+            session.invalidate();//ï¿½Ã»ï¿½sessionï¿½ï¿½ï¿½ï¿½Ê§Ð§
+
+            out.print("loginout");//ï¿½Ã»ï¿½ï¿½Ë³ï¿½ï¿½É¹ï¿½
+
 			break;
-			
+
 		case 5:
-	        User user1 = new User();//´´½¨ÓÃ»§¶ÔÏó
-	        
+	        User user1 = new User();//ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
+
 	        if(request.getParameter("userid")!= null)
 	        {
-	           int userid = Integer.parseInt(request.getParameter("userid"));//»ñµÃÓÃ»§±àºÅ
-	           
-	           user1.setUserID(userid);//ÓÃ»§±àºÅ¸³Öµ
+	           int userid = Integer.parseInt(request.getParameter("userid"));//ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½
+
+	           user1.setUserID(userid);//ï¿½Ã»ï¿½ï¿½ï¿½Å¸ï¿½Öµ
 	        }
-	        
+
 	        if(request.getParameter("username")!=null)
 	        {
 	            String username = request.getParameter("username");
-	            
-	            user1.setUserName(username);//ÎªÓÃ»§Ãû³Æ¸³Öµ
+
+	            user1.setUserName(username);//Îªï¿½Ã»ï¿½ï¿½ï¿½ï¿½Æ¸ï¿½Öµ
 	        }
-	        
+
 	        if(request.getParameter("userpassword")!=null)
 	        {
 	            String userpassword = request.getParameter("userpassword");
-	            
-	            user1.setUserPassword(userpassword);//ÎªÓÃ»§ÃÜÂë¸³Öµ 
+
+	            user1.setUserPassword(userpassword);//Îªï¿½Ã»ï¿½ï¿½ï¿½ï¿½ë¸³Öµ
 	        }
-	        
+
 	        if(request.getParameter("usertype")!= null)
 	        {
 	           String usertype = request.getParameter("usertype");
-	           
+
 	           int usertypeId = Integer.parseInt(usertype);
-	           
-	           user1.setUserType(usertypeId);//ÎªÓÃ»§ÀàÐÍ¸³Öµ
+
+	           user1.setUserType(usertypeId);//Îªï¿½Ã»ï¿½ï¿½ï¿½ï¿½Í¸ï¿½Öµ
 	        }
-	        
-	        this.userOp = new UserDaoImpl();//ÓÃ»§²Ù×÷Àà
-	        
+
+	        this.userOp = new UserDaoImpl();//ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
 	        if(userOp.updateUser(user1))
 	        {
-	          session.setAttribute("user",user1);//½«ÐÂµÄÓÃ»§ÐÅÏ¢·ÅÈësession
+	          session.setAttribute("user",user1);//ï¿½ï¿½ï¿½Âµï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½session
 	          //response.sendRedirect("testuserdao.jsp");
-	          out.print("success");//Êä³ö³É¹¦±êÖ¾
+	          out.print("success");//ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ö¾
 	        }
 	        else
 	        {
-	          out.println("fail");//Êä³öÊ§°Ü±êÖ¾
+	          out.println("fail");//ï¿½ï¿½ï¿½Ê§ï¿½Ü±ï¿½Ö¾
 	        }
-			
+
 			break;
-			
+
 		default:
 			break;
 		}
-		
+
 		out.flush();
 		out.close();
 	}
-	
 
-	//»ñµÃ×îÐÂÌí¼ÓµÄÓÃ»§
+
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½Ã»ï¿½
 	private String getUserListTen()
 	{
-		 String results = "";//»ñµÃÍ·Ê®Ìõµ÷²éÎÊ¾í
-		
-	     UserDaoImpl userop = new UserDaoImpl();//ÓÃ»§Êý¾Ý¿â²Ù×÷Àà
-	     
-	     List userlist = userop.getUsersNotAdmin();//»ñµÃÓÃ»§ÁÐ±í
-	     
-	     int userListSize = 10;//ÏÔÊ¾µ÷²éÎÊ¾íÌõÊý
-	     
+		 String results = "";//ï¿½ï¿½ï¿½Í·Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½
+
+	     UserDaoImpl userop = new UserDaoImpl();//ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+	     List userlist = userop.getUsersNotAdmin();//ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ð±ï¿½
+
+	     int userListSize = 10;//ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½
+
 
 	     results += "<table border='0' cellpadding='0' cellspacing='0' class='tableClass'>";
 	     results += "<tr align='center' class='tdHeader'>";
-	     results += "<td align='center' class='tdHeader'>ÓÃ»§±àºÅ</td>";
-	     results += "<td align='center' class='tdHeader'>ÓÃ»§Ãû³Æ</td>";
-	     results += "<td align='center' class='tdHeader'>ÓÃ»§ÃÜÂë</td>";
-	     results += "<td align='center' class='tdHeader'>²Ù×÷</td>";
-	     results += "<td align='center' class='tdHeader'>²Ù×÷</td>";
-	     results += "<td align='center' class='tdHeader'>²Ù×÷</td>";
+	     results += "<td align='center' class='tdHeader'>ï¿½Ã»ï¿½ï¿½ï¿½ï¿½</td>";
+	     results += "<td align='center' class='tdHeader'>ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½</td>";
+	     results += "<td align='center' class='tdHeader'>ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½</td>";
+	     results += "<td align='center' class='tdHeader'>ï¿½ï¿½ï¿½ï¿½</td>";
+	     results += "<td align='center' class='tdHeader'>ï¿½ï¿½ï¿½ï¿½</td>";
+	     results += "<td align='center' class='tdHeader'>ï¿½ï¿½ï¿½ï¿½</td>";
 	     results += "</tr>";
-	     
+
 	     if(userListSize > userlist.size())
 	     {
-	    	 userListSize = userlist.size();//»ñµÃÓÃ»§ÁÐ±í
+	    	 userListSize = userlist.size();//ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ð±ï¿½
 	     }
-	     
+
 	     for(int i = 0;i < userListSize;i++)
 	     {
-	         User user = (User)userlist.get(i);//»ñµÃÓÃ»§ÐÅÏ¢
-	         
+	         User user = (User)userlist.get(i);//ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ï¢
+
 	         results += "<tr class='trContent'>";
-	         
+
 	         results += "<td class='tdContent' align='center'>" + user.getUserID() + "</td>";
-	         
+
 		     String userName = user.getUserName().length()<= nameSize?user.getUserName():user.getUserName().substring(0,nameSize);
-	         
+
 	         results += "<td class='tdContent' align='center'>" + userName + "</td>";
-	         
-		     String userPass = user.getUserPassword().length()<= passSize?user.getUserPassword():user.getUserPassword().substring(0,passSize);	         
-	         
+
+		     String userPass = user.getUserPassword().length()<= passSize?user.getUserPassword():user.getUserPassword().substring(0,passSize);
+
 	         results += "<td class='tdContent' align='center'>" + userPass + "</td>";
-	       
-	         results += "<td class='tdContent' width='30' align='center'>" + "<a href='javascript:getUserDataById1(" + user.getUserID() + ")'>²é¿´</a>" + "</td>";
-	         results += "<td class='tdContent' width='30' align='center'>" + "<a href='javascript:getUserDataById(" + user.getUserID() + ")'>ÐÞ¸Ä</a>" + "</td>";
-	         results += "<td class='tdContent' width='30' align='center'>" + "<a href='javascript:deleteUserDataById(" + user.getUserID() + ")'>É¾³ý</a>" + "</td>";
-	         
+
+	         results += "<td class='tdContent' width='30' align='center'>" + "<a href='javascript:getUserDataById1(" + user.getUserID() + ")'>ï¿½é¿´</a>" + "</td>";
+	         results += "<td class='tdContent' width='30' align='center'>" + "<a href='javascript:getUserDataById(" + user.getUserID() + ")'>ï¿½Þ¸ï¿½</a>" + "</td>";
+	         results += "<td class='tdContent' width='30' align='center'>" + "<a href='javascript:deleteUserDataById(" + user.getUserID() + ")'>É¾ï¿½ï¿½</a>" + "</td>";
+
 	         results += "</tr>";
-	       
+
 	     }
 	     results +="</table>";
-		
+
 		return results;
 	}
-	//»ñµÃ×îÐÂÊ®Ìõµ÷²éÎÊ¾í
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½
 	private String getSurveyListTen()
 	{
-		String results = "";//»ñµÃÍ·Ê®Ìõµ÷²éÎÊ¾í
-		
-	     SurveyDaoImpl surveyOp = new SurveyDaoImpl();//µ÷²éÎÊ¾í²Ù×÷Àà
-	     
-	     List surveylist = surveyOp.getServeyList();//»ñµÃµ÷²éÎÊ¾íÁÐ±í
-	     
-	     int surveyListSize = 10;//ÏÔÊ¾µ÷²éÎÊ¾íÌõÊý
-	     
+		String results = "";//ï¿½ï¿½ï¿½Í·Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½
+
+	     SurveyDaoImpl surveyOp = new SurveyDaoImpl();//ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+	     List surveylist = surveyOp.getServeyList();//ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ð±ï¿½
+
+	     int surveyListSize = 10;//ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½
+
 	     if(surveyListSize > surveylist.size())
 	     {
-	    	 surveyListSize = surveylist.size();//»ñµÃµ÷²éÁÐ±íµÄÊµ¼Ê´óÐ¡
+	    	 surveyListSize = surveylist.size();//ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½Êµï¿½Ê´ï¿½Ð¡
 	     }
-	     
+
 	     results +="<table border='0' cellpadding='0' cellspacing='0' class='tableClass'>";
 	     results +="<tr>";
-	     results +="<td align='center' class='tdHeader'>ÎÊ¾í±êÌâ</td>";
-	     results +="<td align='center' class='tdHeader'>ÎÊ¾íËµÃ÷</td>";
-	     results +="<td align='center' class='tdHeader'>´´½¨Ê±¼ä</td>";
-	     results +="<td align='center' class='tdHeader'>²Ù×÷</td>";
-	     results +="<td align='center' class='tdHeader'>²Ù×÷</td>";
-	     results +="<td align='center' class='tdHeader'>²Ù×÷</td>";
+	     results +="<td align='center' class='tdHeader'>ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½</td>";
+	     results +="<td align='center' class='tdHeader'>ï¿½Ê¾ï¿½Ëµï¿½ï¿½</td>";
+	     results +="<td align='center' class='tdHeader'>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½</td>";
+	     results +="<td align='center' class='tdHeader'>ï¿½ï¿½ï¿½ï¿½</td>";
+	     results +="<td align='center' class='tdHeader'>ï¿½ï¿½ï¿½ï¿½</td>";
+	     results +="<td align='center' class='tdHeader'>ï¿½ï¿½ï¿½ï¿½</td>";
 	     results +="</tr>";
 	     for(int i = 0;i < surveyListSize;i++)
 	     {
-	       Survey survey = (Survey)surveylist.get(i);//»ñµÃÓÃ»§ÐÅÏ¢
-	       
+	       Survey survey = (Survey)surveylist.get(i);//ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ï¢
+
 	       results +="<tr class='trContent'>";
-	       
+
 	       String surveyTitle = survey.getSurveyTitle().length()<= titleSize?survey.getSurveyTitle():survey.getSurveyTitle().substring(0,titleSize);
-	       
+
 	       results +="<td class='tdContent' align='center'>" + surveyTitle + "</td>";
-	       
+
 	       String surveyLink = survey.getSurveyLink().length()<=linkSize?survey.getSurveyLink():survey.getSurveyLink().substring(0,linkSize);
 	       results +="<td class='tdContent' align='center'>" + surveyLink + "</td>";
-	       
-	       Date date = survey.getSurveyCreateDate();//µ÷²éÎÊ¾í´´½¨Ê±¼ä
-	       
+
+	       Date date = survey.getSurveyCreateDate();//ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+
 	       if(date != null)
 	         results +="<td class='tdContent' align='center'>" + date.toString() + "</td>";
 	       else
-	         results +="<td class='tdContent' align='center'>" + "´´½¨Ê±¼äÒì³£" + "</td>";
-	       
-	     
-	         
-	       results +="<td class='tdContent' width='30' align='center'>" + "<a href='javascript:updateSurveyDataById(" + survey.getSurveyID() + ")'>ÐÞ¸Ä</a>" + "</td>";
-	       results +="<td class='tdContent' width='30' align='center'>" + "<a href='javascript:deleteSurveyDataById(" + survey.getSurveyID() + ")'>É¾³ý</a>" + "</td>";
-	       results +="<td class='tdContent' width='30' align='center'>" + "<a href='../showsurvey.jsp?surveyId=" + survey.getSurveyID() + "'>Ô¤ÀÀ</a>" + "</td>";
+	         results +="<td class='tdContent' align='center'>" + "ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ì³£" + "</td>";
+
+
+
+	       results +="<td class='tdContent' width='30' align='center'>" + "<a href='javascript:updateSurveyDataById(" + survey.getSurveyID() + ")'>ï¿½Þ¸ï¿½</a>" + "</td>";
+	       results +="<td class='tdContent' width='30' align='center'>" + "<a href='javascript:deleteSurveyDataById(" + survey.getSurveyID() + ")'>É¾ï¿½ï¿½</a>" + "</td>";
+	       results +="<td class='tdContent' width='30' align='center'>" + "<a href='../showsurvey.jsp?surveyId=" + survey.getSurveyID() + "'>Ô¤ï¿½ï¿½</a>" + "</td>";
 	       results +="</tr>";
-	       
+
 	     }
 	     results +="</table>";
-		
+
 		return results;
 	}
-	
-	
-    //³õÊ¼»¯
+
+
+    //ï¿½ï¿½Ê¼ï¿½ï¿½
 	public void init() throws ServletException {
-		
+
 	}
 
 }
